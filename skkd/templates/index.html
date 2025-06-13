@@ -1,0 +1,428 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+
+
+            <div id="top"></div>
+
+            <section data-bgimage="url({% static 'images/background/1.webp' %}) center" class="no-bottom relative overflow-hidden" id="home-section">
+
+                <div id="shine-wrapper">
+                    <div class="template shine"></div>
+                </div>
+
+                <div class="container relative z-1000">
+
+                    <div class="row g-4 align-items-center justify-content-center">
+                        <div class="col-lg-12 text-center">
+                            <div class="relative z-1000">
+                                <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Reliable Clean</div>
+                                <h1 class="wow fadeInUp fs-96 fs-sm-10vw mb-0" data-wow-delay=".2s">Sparkling Spaces</h1>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 text-center">
+                            <p class="lead wow fadeInUp" data-wow-delay=".4s">Enjoy a spotless space with our expert cleaning team. Affordable, eco-friendly, and tailored to your needs!</p>
+
+                            <div class="spacer-10"></div>
+
+                            <a class="btn-main wow fadeInUp" data-wow-delay=".6s" href="book-service.html">Book Cleaning Service</a>
+                        </div>
+
+                        <div class="spacer-10"></div>
+
+                        <div class="col-lg-8">
+                            <img src="{% static 'images/misc/1.webp' %}" class="w-100" data-0="transform: translateY(0px);" data-1000="transform: translateY(300px);" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <section class="bg-color-3 text-light section-dark" id="about-section">
+                <div class="container relative">
+                    <div class="row g-4 gx-5 align-items-center">
+                        <div class="col-lg-6 relative">
+                            <div class="relative z-1000">
+                                <div class="subtitle wow fadeInUp" data-wow-delay=".0s">About Uclean</div>
+                                <h2>Bringing Clean, Comfort, and Care Together</h2>
+                                <p>We are a team of passionate cleaning experts who take pride in delivering the highest standard of service. With years of experience in the industry, we've perfected our cleaning methods to ensure every job is done right.</p>
+
+                                <a class="btn-main bg-color-2 text-dark wow fadeInUp" data-wow-delay=".6s" href="book-service.html">Book Service Now</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="row g-4">
+                                <div class="col-6">
+                                    <img src="{% static 'images/misc/11.webp' %}" class="img-fluid rounded-10 mb-4 w-70 ms-30 wow scaleIn" alt="">
+                                    <img src="{% static 'images/misc/3.webp' %}" class="img-fluid rounded-10 wow scaleIn" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <div class="spacer-single sm-hide"></div>
+                                    <img src="{% static 'images/misc/10.webp' %}" class="img-fluid rounded-10 mb-4 wow scaleIn" alt="">
+                                    <img src="{% static 'images/misc/8.webp' %}" class="img-fluid rounded-10 w-70 wow scaleIn" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-color-3 no-top text-light section-dark relative" id="services">
+                <img src="{% static 'images/deco/s1.webp' %}" class="w-10 mt-min-60 abs start-10 wow scaleOut" alt="">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-6 offset-lg-3 text-center">
+                            <div class="subtitle wow fadeInUp mb-3">Our Services</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s">Our Cleaning Services</h2>
+                            <p class="lead mb-0 wow fadeInUp">Whether it's a quick refresh or a deep clean transformation, our expert touch leaves your home or office shining.</p>
+                            <div class="spacer-single"></div>
+                            <div class="spacer-half"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pt-0">
+                <div class="container mt-min-120">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="relative mb-3">
+                                <div class="relative overflow-hidden rounded-1 shadow-soft">
+                                    <img src="{% static 'images/services/1.webp' %}" class="img-fluid hover-scale-1-2" alt="Residential cleaning service">
+                                </div>
+                                <h4>Residential Cleaning</h4>
+                                <p class="no-bottom">General cleaning for homes, including dusting, vacuuming, mopping, and tidying up living areas, bedrooms, bathrooms, and kitchens.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="relative mb-3">
+                                <div class="relative overflow-hidden rounded-1 shadow-soft">
+                                    <img src="{% static 'images/services/2.webp' %}" class="img-fluid hover-scale-1-2" alt="Commercial cleaning service">
+                                </div>
+                                <h4>Commercial Cleaning</h4>
+                                <p class="no-bottom">Cleaning office spaces, including desks, floors, break rooms, restrooms, and common areas to maintain a professional environment.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="relative mb-3">
+                                <div class="relative overflow-hidden rounded-1 shadow-soft">
+                                    <img src="{% static 'images/services/3.webp' %}" class="img-fluid hover-scale-1-2" alt="Deep cleaning service">
+                                </div>
+                                <h4>Deep Cleaning</h4>
+                                <p class="no-bottom">A thorough cleaning of the entire property, including hard-to-reach areas, appliances, baseboards, and grout lines.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="relative mb-3">
+                                <div class="relative overflow-hidden rounded-1 shadow-soft">
+                                    <img src="{% static 'images/services/4.webp' %}" class="img-fluid hover-scale-1-2" alt="Move-in/move-out cleaning">
+                                </div>
+                                <h4>Move-In/Move-Out Cleaning</h4>
+                                <p class="no-bottom">Specialized cleaning for properties being vacated or prepared for new occupants, focusing on removing dirt, stains, and residue.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="relative mb-3">
+                                <div class="relative overflow-hidden rounded-1 shadow-soft">
+                                    <img src="{% static 'images/services/5.webp' %}" class="img-fluid hover-scale-1-2" alt="Post-construction cleaning">
+                                </div>
+                                <h4>Post-Construction Cleaning</h4>
+                                <p class="no-bottom">Removing dust, debris, and construction materials after renovation or new construction projects, leaving the space ready for use.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="relative mb-3">
+                                <div class="relative overflow-hidden rounded-1 shadow-soft">
+                                    <img src="{% static 'images/services/6.webp' %}" class="img-fluid hover-scale-1-2" alt="Carpet and upholstery cleaning">
+                                </div>
+                                <h4>Carpet and Upholstery Cleaning</h4>
+                                <p class="no-bottom">Deep cleaning and stain removal from carpets, rugs, and upholstered furniture using specialized equipment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-light">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="text-center">
+                                <img src="{% static 'images/icons/white/labor.webp' %}" class="bg-color w-30 p-15 rounded-10 mb-3 wow scaleIn" alt="">
+                                <div class="relative wow fadeInUp">
+                                    <h4>Professional Team</h4>
+                                    <p class="mb-0">Our trained, insured cleaners ensure professional, trusted service and impeccable results.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="text-center">
+                                <img src="{% static 'images/icons/white/calendar.webp' %}" class="bg-color w-30 p-15 rounded-10 mb-3 wow scaleIn" alt="">
+                                <div class="relative wow fadeInUp">
+                                    <h4>On Time Service</h4>
+                                    <p class="mb-0">Reliable, punctual service that respects your schedule and exceeds expectations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="text-center">
+                                <img src="{% static 'images/icons/white/best-price.webp' %}" class="bg-color w-30 p-15 rounded-10 mb-3 wow scaleIn" alt="">
+                                <div class="relative wow fadeInUp">
+                                    <h4>Transparent Pricing</h4>
+                                    <p class="mb-0">Affordable, upfront rates with no hidden costs — quality cleaning at the right price.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="text-center">
+                                <img src="{% static 'images/icons/white/eco-friendly.webp' %}" class="bg-color w-30 p-15 rounded-10 mb-3 wow scaleIn" alt="">
+                                <div class="relative wow fadeInUp">
+                                    <h4>Eco Friendly</h4>
+                                    <p class="mb-0">We use non-toxic, eco-friendly products for a safe, healthy, and sparkling environment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacer-single"></div>
+            </section>
+
+            
+
+            
+
+            <section class="bg-color-3 section-dark text-light" id="why-us">
+                <div class="container relative">
+                    <div class="row g-4 gx-5 align-items-center">
+                        <div class="col-lg-6 relative">
+                            <div class="relative z-1000">
+                                <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Why Choose Us</div>
+                                <h2>Top Six Reasons to Trust Us</h2>
+
+                                <ul class="ul-style-2">
+                                    <li>Our experienced staff deliver impeccable results with attention to detail.</li>
+                                    <li>We tailor our services to meet your unique needs and preferences.</li>
+                                    <li>Safe and sustainable cleaning solutions for home and environment.</li>
+                                    <li>Punctual, dependable, and fully vetted professionals you can trust.</li>
+                                    <li>Transparent pricing that fits your budget, with no surprises.</li>
+                                    <li>We’re not done until you’re happy — your satisfaction is our priority!</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="twentytwenty-container rounded-1">
+                                <img src="{% static 'images/before-after/1b.jpg' %}" alt="" class="img-responsive">
+                                <img src="{% static 'images/before-after/1a.jpg' %}" alt="" class="img-responsive">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-color-3 section-dark text-light pt-0 relative" id="pricing">
+                <img src="{% static 'images/deco/s1.webp' %}" class="w-10 abs end-10 wow scaleOut" alt="">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-6 offset-lg-3 text-center">
+                            <div class="subtitle wow fadeInUp mb-3">Complete Solutions</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s">Pricing Plans</h2>
+                            <p class="lead wow fadeInUp">Choose from flexible, affordable cleaning plans designed to fit your needs, from one-time deep cleans to regular maintenance services.</p>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="pt-0">
+                <div class="container mt-min-120">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="relative bg-light p-4 rounded-10">
+                                <div class="text-center">
+                                    <h5 class="mb-0">One Time or Monthly</h5>
+                                    <div class="spacer-30"></div>
+                                    <div class="ms-5 fw-500">
+                                        <span>$</span>
+                                        <span class="fs-64 fw-bold text-dark">49</span>
+                                        <span>/Hour/Cleaner</span>
+                                    </div>
+                                    <div class="spacer-20"></div>
+                                </div>
+
+                                <div class="text-center">
+                                    <a class="btn-main" href="book-service.html">Book Now</a>
+                                </div>
+                                <div class="spacer-20"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="relative bg-light p-4 rounded-10">
+                                <div class="text-center">
+                                    <h5 class="mb-0">Recurring (Weekly, Biweekly)</h5>
+                                    <div class="spacer-30"></div>
+                                    <div class="ms-5 fw-500">
+                                        <span>$</span>
+                                        <span class="fs-64 fw-bold text-dark">43</span>
+                                        <span>/Hour/Cleaner</span>
+                                    </div>
+                                    <div class="spacer-20"></div>
+                                </div>
+
+                                <div class="text-center">
+                                    <a class="btn-main" href="book-service.html">Book Now</a>
+                                </div>
+                                <div class="spacer-20"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="relative bg-light p-4 rounded-10">
+                                <div class="text-center">
+                                    <h5 class="mb-0">Office &amp; Commercial</h5>
+                                    <div class="spacer-30"></div>
+                                    <div class="ms-5 fw-500">
+                                        <span>$</span>
+                                        <span class="fs-64 fw-bold text-dark">40</span>
+                                        <span>/Hour/Cleaner</span>
+                                    </div>
+                                    <div class="spacer-20"></div>
+                                </div>
+
+                                <div class="text-center">
+                                    <a class="btn-main" href="book-service.html">Book Now</a>
+                                </div>
+                                <div class="spacer-20"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <section class="bg-light relative no-top no-bottom overflow-hidden" style="background-size: cover; background-repeat: no-repeat;" id="contact">
+                <div class="container-fluid position-relative half-fluid" style="background-size: cover; background-repeat: no-repeat;">
+                    <div class="container" style="background-size: cover; background-repeat: no-repeat;">
+                        <div class="row g-4" style="background-size: cover; background-repeat: no-repeat;">
+                            <!-- Image -->
+                            <div class="col-lg-6 position-lg-absolute left-half h-100" style="background-size: cover; background-repeat: no-repeat;">
+                                <div class="image bgcustom"
+                                    data-bgimage="url({% static 'images/misc/12.webp' %}) center"
+                                    style="background: url('{% static 'images/misc/12.webp' %}') center center / cover no-repeat;">
+                                </div>
+                                
+                            </div>
+
+                            <!-- Text -->
+                            <div class="col-lg-6 offset-lg-6" style="background-size: cover; background-repeat: no-repeat;">
+                                <div class="spacer-single"></div>
+                                <div class="spacer-double"></div>
+                                <div class="ps-lg-5">
+                                    <h3>Do you have any question?</h3>
+                                    <form name="contactForm" id="contact_form" class="form-border" method="post" action="contact.php">
+                                        <div class="row g-4">
+                                            <div class="col-md-4 mb-3">
+                                                <div class="field-set">
+                                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="field-set">
+                                                    <input type="text" name="email" id="email" class="form-control" placeholder="Your Email" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="field-set">
+                                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="field-set mb-4">
+                                            <textarea name="message" id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                        </div>
+
+                                        <div id="submit" class="mt20">
+                                            <input type="submit" id="send_message" value="Send Message" class="btn-main">
+                                        </div>
+
+                                        <div id="success_message" class="success">
+                                            Your message has been sent successfully. Refresh this page if you want to send more messages.
+                                        </div>
+                                        <div id="error_message" class="error">
+                                            Sorry there was an error sending your form.
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="spacer-double"></div>
+                                <div class="spacer-single"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<section>
+                <div class="container relative z-2">
+                    <div class="row g-4">
+                        <div class="col-lg-6 text-center">
+                            <div class="d-inline-block text-center mx-4">
+                                <h4 class="mb-1">Excellent</h4>
+                                <div class="de-rating-ext fs-18">
+                                    <div class="d-stars">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="fs-14 mb-0">Based on <span class="fw-bold">185 reviews</span></div>
+                                    <img src="{% static 'images/misc/trustpilot-invert.webp' %}" class="w-120px" alt="">
+                                </div>
+                            </div>
+
+                            <div class="d-inline-block text-center mx-4">
+                                <h4 class="mb-1">4.8 out of 5</h4>
+                                <div class="de-rating-ext fs-18">
+                                    <div class="d-stars">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="fs-14 mb-0">Based on <span class="fw-bold">200 reviews</span></div>
+                                    <img src="{% static 'images/misc/google.webp' %}" class="w-120px" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-center">
+                            <h2 class="mb-0">We Are a Trusted Cleaning Company</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- content close -->
+{% endblock %}

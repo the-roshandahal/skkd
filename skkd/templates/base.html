@@ -1,0 +1,182 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SKKD — Cleaning Services</title>
+    <link rel="icon" href="{% static 'images/icon.png' %}" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="SKKD — Cleaning Services" name="description" >
+    <meta content="" name="keywords" >
+    <meta content="" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css" >
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <!-- header begin -->
+        <header class="header-light transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="{% static 'images/logo.png' %}" alt="" >
+                                        <img class="logo-scroll" src="{% static 'images/logo.png' %}" alt="" >
+                                        <img class="logo-mobile" src="{% static 'images/logo.png' %}" alt="" >
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="#home-section">Home</a></li>
+                                    <li><a class="menu-item" href="#about-section">About</a>
+                                    <li><a class="menu-item" href="#services">Services</a></li>
+                                    <li><a class="menu-item" href="#why-us">Why Us?</a></li>
+                                    <li><a class="menu-item" href="#pricing">Pricing</a></li>
+                                    <li><a class="menu-item" href="#contact">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <div class=" xs-hide" style="margin-right: 20px;">
+                                        <span> Need Help?</span>
+                                        <h5>+61 0452 652 445</h5>
+                                    </div>
+                                    <a href="book-service.html" class="btn-main"><i class="icofont-phone"></i> Call Now</a>
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        {% block content %}
+        <!-- Content will be injected here from child templates -->
+        {% endblock %}
+    <!-- footer begin -->
+        <footer class="section-dark">
+            <div class="container">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-sm-6">
+                        <img src="{% static 'images/logo.png' %}" class="w-150px" alt="" >
+                        <div class="spacer-20"></div>
+                        <p>We are a team of passionate cleaning experts who take pride in delivering the highest standard of service. With years of experience in the industry, we've perfected our cleaning methods to ensure every job is done right.</p>
+
+                        <div class="social-icons mb-sm-30">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 order-lg-1 order-sm-2">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="widget">
+                                    <h5>Company</h5>
+                                    <ul>
+                                        <li><a class="menu-item" href="#home-section">Home</a></li>
+                                        <li><a class="menu-item" href="#about-section">About</a>
+                                        <li><a class="menu-item" href="#services">Services</a></li>
+                                        <li><a class="menu-item" href="#why-us">Why Us?</a></li>
+                                        <li><a class="menu-item" href="#pricing">Pricing</a></li>
+                                        <li><a class="menu-item" href="#contact">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-sm-6">
+                                <div class="widget">
+                                    <h5>Our Services</h5>
+                                    <ul>
+                                        <li><a id="services">Residential Cleaning</a></li>
+                                        <li><a id="services">Commercial Cleaning</a></li>
+                                        <li><a id="services">Deep Cleaning</a></li>
+                                        <li><a id="services">Move-In/Move-Out Cleaning</a></li>
+                                        <li><a id="services">Post-Construction Cleaning</a></li>
+                                        <li><a id="services">Carpet and Upholstery Cleaning</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 order-lg-2 order-sm-1">
+                        <div class="widget">
+                            <div class="fw-bold text-white"><i class="icofont-wall-clock me-2 id-color-2"></i>We're Open</div>
+                            Monday - Saturday 08.00 - 18.00
+
+                            <div class="spacer-20"></div>
+
+                            <div class="fw-bold text-white"><i class="icofont-location-pin me-2 id-color-2"></i>Office Location</div>
+                            1/125 Military Road Port Kembla 2505
+
+                            <div class="spacer-20"></div>
+
+                            <div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color-2"></i>Send a Message</div>
+                            contact@skkd.com.au
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-md-12">
+                            <div class="de-flex">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+    </div>
+
+  
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/designesia.js' %}"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+    <script src="{% static 'js/custom-marquee.js' %}"></script>
+    <script src="{% static 'js/custom-swiper-1.js' %}"></script>
+    <script src="{% static 'js/jquery.event.move.js' %}"></script>
+    <script src="{% static 'js/jquery.twentytwenty.js' %}"></script>
+
+    <script>
+    $(window).on("load", function(){
+      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
+      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
+    });
+    </script>
+
+</html>
