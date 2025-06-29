@@ -19,6 +19,29 @@
     <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
     <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css" >
+    <script>
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+const csrftoken = getCookie('csrftoken');
+
+$.ajaxSetup({
+    headers: { "X-CSRFToken": csrftoken }
+});
+</script>
+
 
 </head>
 
@@ -118,9 +141,9 @@
                                         <li><a id="services">Residential Cleaning</a></li>
                                         <li><a id="services">Commercial Cleaning</a></li>
                                         <li><a id="services">Deep Cleaning</a></li>
-                                        <li><a id="services">Move-In/Move-Out Cleaning</a></li>
-                                        <li><a id="services">Post-Construction Cleaning</a></li>
-                                        <li><a id="services">Carpet and Upholstery Cleaning</a></li>
+                                        <li><a id="services">End of Lease Cleaning</a></li>
+                                        <li><a id="services">Window & Glass Cleaning</a></li>
+                                        <li><a id="services">Carpet Cleaning</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -177,5 +200,41 @@
       $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
     });
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function() {
+  $("#contact_form").on("submit", function(e) {
+    e.preventDefault();
+
+    $("#success_message").hide();
+    $("#error_message").hide();
+
+    $("#send_message").val("Sending...").prop("disabled", true);
+
+    $.ajax({
+      url: $(this).attr("action"),
+      type: "POST",
+      data: $(this).serialize(),
+      dataType: "json",
+      success: function(response) {
+        if (response.success) {
+          $("#success_message").show();
+          $("#contact_form")[0].reset();
+        } else {
+          $("#error_message").text(response.error || "An error occurred.").show();
+        }
+      },
+      error: function(xhr, status, error) {
+        console.log("AJAX error:", status, error);
+        $("#error_message").text("Network error. Please try again.").show();
+      },
+      complete: function() {
+        $("#send_message").val("Send Message").prop("disabled", false);
+      }
+    });
+  });
+});
+</script>
+
 
 </html>
