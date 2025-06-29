@@ -19,28 +19,40 @@
     <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
     <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
-    }
-    return cookieValue;
-}
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("contact_form");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // stop the redirect!
 
-const csrftoken = getCookie('csrftoken');
+    const formData = new FormData(form);
+    const csrfToken = document.querySelector("[name=csrfmiddlewaretoken]").value;
 
-$.ajaxSetup({
-    headers: { "X-CSRFToken": csrftoken }
+    fetch(form.action, {
+      method: "POST",
+      headers: {
+        "X-CSRFToken": csrfToken,
+      },
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(result => {
+      if (result.success) {
+        alert("Thank you! We will get back to you shortly.");
+        form.reset();
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    })
+    .catch(() => {
+      alert("Network error. Please try again.");
+    });
+  });
 });
 </script>
+
+
 
 
 </head>
@@ -200,41 +212,6 @@ $.ajaxSetup({
       $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
     });
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(function() {
-  $("#contact_form").on("submit", function(e) {
-    e.preventDefault();
-
-    $("#success_message").hide();
-    $("#error_message").hide();
-
-    $("#send_message").val("Sending...").prop("disabled", true);
-
-    $.ajax({
-      url: $(this).attr("action"),
-      type: "POST",
-      data: $(this).serialize(),
-      dataType: "json",
-      success: function(response) {
-        if (response.success) {
-          $("#success_message").show();
-          $("#contact_form")[0].reset();
-        } else {
-          $("#error_message").text(response.error || "An error occurred.").show();
-        }
-      },
-      error: function(xhr, status, error) {
-        console.log("AJAX error:", status, error);
-        $("#error_message").text("Network error. Please try again.").show();
-      },
-      complete: function() {
-        $("#send_message").val("Send Message").prop("disabled", false);
-      }
-    });
-  });
-});
-</script>
 
 
 </html>
