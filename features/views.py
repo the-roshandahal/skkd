@@ -26,7 +26,7 @@ def contact_view(request):
     phone = request.POST.get("phone")
     message = request.POST.get("message")
 
-    # Save to DB
+    # Save to database
     contact = ContactMessage.objects.create(
         name=name,
         email=email,
@@ -34,25 +34,31 @@ def contact_view(request):
         message=message,
     )
 
-    # Send yourself an email
+    # Build email
     email_subject = f"New Contact Form Submission from {name}"
     email_body = f"""
     Name: {name}
     Email: {email}
     Phone: {phone}
+
     Message:
     {message}
     """
 
+    # Always try sending, but don't fail if it errors
+    email_sent = True
     try:
         send_mail(
             subject=email_subject,
             message=email_body,
-            from_email="contact@skkd.com.au",
+            from_email="contact@skkd.com.au",     # Always YOUR domain email
             recipient_list=["contact@skkd.com.au"],
             fail_silently=False,
         )
-
-        return JsonResponse({"success": True})
     except Exception as e:
-        return JsonResponse({"success": False, "error": str(e)})
+        email_sent = False
+
+    return JsonResponse({
+        "success": True,
+        "email_sent": email_sent,
+    })
