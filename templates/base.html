@@ -37,34 +37,43 @@
 
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact_form');
 
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Stop the normal form submission
 
+        const formData = new FormData(form);
 
-
-
-    <script>
         fetch("{% url 'contact' %}", {
-    method: "POST",
-    body: formData,
-    headers: {
-        'X-CSRFToken': '{{ csrf_token }}',
-    },
-})
-.then(response => response.json())
-.then(data => {
-    if (data.success) {
-        alert(data.email_sent 
-            ? "Thank you! Your message was sent successfully." 
-            : "Thanks! Your message was saved, but email could not be sent at this time.");
-    } else {
-        alert("Something went wrong. Please try again.");
-    }
-})
-.catch(error => {
-    alert("An error occurred. Please try again.");
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}",
+            },
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                if (data.email_sent) {
+                    alert("Thank you! Your message was sent successfully.");
+                } else {
+                    alert("Thanks! Your message was saved, but email could not be sent at this time.");
+                }
+                form.reset();
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        })
+        .catch(error => {
+            alert("An error occurred. Please try again.");
+            console.error(error);
+        });
+    });
 });
-
 </script>
+
 
 
 
@@ -91,7 +100,7 @@
                             <div class="de-flex-col">
                                 <!-- logo begin -->
                                 <div id="logo">
-                                    <a href="index.html">
+                                    <a href="{% url 'home' %}">
                                         <img class="logo-main" src="{% static 'images/logo.png' %}" alt="" >
                                         <img class="logo-scroll" src="{% static 'images/logo.png' %}" alt="" >
                                         <img class="logo-mobile" src="{% static 'images/logo.png' %}" alt="" >
