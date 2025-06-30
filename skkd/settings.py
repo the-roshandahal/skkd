@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-2h7-n62y$5*s4ogygad=p9w0e#r3#1rze)!kh0k1h(oe+-ttwu
 DEBUG = False
 DEBUG = True
 
-ALLOWED_HOSTS = ['skkd.com.au', 'www.skkd.com.au']
+ALLOWED_HOSTS = ['skkd.com.au', 'www.skkd.com.au','*']
 
 
 # Application definition
@@ -139,6 +139,8 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "mail.skkd.com.au"
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False
 EMAIL_HOST_USER = "contact@skkd.com.au"
+DEFAULT_FROM_EMAIL = "contact@skkd.com.au"
 EMAIL_HOST_PASSWORD = "zt4TEB@TP*bb45zR"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

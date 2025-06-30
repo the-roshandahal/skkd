@@ -48,10 +48,11 @@ def contact_view(request):
         send_mail(
             subject=email_subject,
             message=email_body,
-            from_email=email,  # Sender
+            from_email="contact@skkd.com.au",
             recipient_list=["contact@skkd.com.au"],
             fail_silently=False,
         )
+
         return JsonResponse({"success": True})
     except Exception as e:
         return JsonResponse({"success": False, "error": str(e)})
