@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-2h7-n62y$5*s4ogygad=p9w0e#r3#1rze)!kh0k1h(oe+-ttwu
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-# DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = ['skkd.com.au', 'www.skkd.com.au','*']
 
